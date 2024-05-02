@@ -1,0 +1,30 @@
+th{
+    padding:20px;
+    margin-left: 20px;;
+}
+.cl{
+    background-color: blue;
+}
+.co{
+    text-align: center;
+}
+.bo{
+    bottom:550px;
+    margin-left:500px;
+    position:relative;
+    right:50px;
+    margin-bottom:60px;
+    background-color: blanchedalmond;
+    border: solid 0px red;
+    border-radius: 10px;
+    color: blueviolet;
+    padding: 20px;
+    width: 40vw;
+
+}
+h2{
+    text-align:center;
+}
+.hide{
+    display:none;
+}

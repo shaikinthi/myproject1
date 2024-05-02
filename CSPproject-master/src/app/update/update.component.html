@@ -1,0 +1,64 @@
+<mat-toolbar color="primary" class="mat-elevation-z8"><span>HYGIENE</span>
+    <div class="spacer"></div>
+    <a routerLink="/home"mat-button>HOME</a>
+          
+    <a routerLink="/about"mat-button>ABOUT</a>
+  
+    <a routerLink="/need" mat-button>HYGIENE</a><br><br>
+    
+    <a routerLink="/details" mat-button>DETAILS</a>
+    <a routerLink="/contact" mat-button>CONTACT</a>
+    <a routerLink="/logout" mat-button>LOGOUT</a>
+    
+    
+    
+    
+    
+    </mat-toolbar>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">DETAILS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" routerLink="/insert" routerLinkActive="active">INSERT</a>
+            <a class="nav-item nav-link" routerLink="/delete" routerLinkActive="active">DELETE</a>
+            <a class="nav-item nav-link" routerLink="/read" routerLinkActive="active">READ</a>
+            
+            <a class="nav-item nav-link " routerLink="/update" routerLinkActive="active">UPDATE</a>
+            <a class="nav-item nav-link " routerLink="/view" routerLinkActive="active">VIEW</a>
+          </div>
+        </div>
+      </nav>
+<form>
+    <br/>
+    <div class="message">
+        <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+        <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+        </div>
+    <div class="para">
+    <input type="text"  name="id
+    " [(ngModel)]="User.id">&nbsp;
+    <button type="submit" value="Read" class="btn btn-success my-2" (click)="Read()">Read</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr> 
+    <div *ngIf="canShowData">
+    <label>Id</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" name="id"  [(ngModel)]="User.id"><br/><br/>
+    <label>Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="name"  [(ngModel)]="User.name"><br/><br/>
+    <label>Hand_washing</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" name="hand_washing"  [(ngModel)]="User.hand_washing"><br/><br/>
+    <label>Brushing</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" name="brushing"  [(ngModel)]="User.brushing"><br/><br/>
+    <label>Clean_surroundings</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" name="clean_surroundings"  [(ngModel)]="User.clean_surroundings"><br/><br/>
+    
+    
+    <button type="submit" value="Save" class="btn btn-success my-2" (click)="Update()">Update</button>&nbsp;&nbsp;
+    <button type="cancel" value="Save" class="btn btn-success my-2">Cancel</button>
+    
+    </div>
+    </div>
+    </form>
+

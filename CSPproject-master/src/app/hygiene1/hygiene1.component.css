@@ -1,0 +1,14 @@
+div{
+    background-image:url("https://www.officialroyalwedding2011.org/wp-content/uploads/2020/03/hygiene-1170x780.jpeg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    padding:20px;
+    height:100vh;
+
+}
+li{
+    color:rgb(16, 1, 1);
+    font-size:20px;
+    padding:20px;
+    font-weight: bold;
+}

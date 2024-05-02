@@ -1,0 +1,32 @@
+.con1{
+    background-image: url("https://media.istockphoto.com/vectors/abstract-polygonal-light-of-hands-holding-drop-vector-id1137738356?k=6&m=1137738356&s=612x612&w=0&h=rBZiVPCSQdyKvJR4wUC2cLtBD09ZNYHxlhBTAG4Hmis=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    
+    
+}
+
+.head{
+    color:white;
+    text-decoration: underline;
+    font-size: 35px;
+    font-family: "Sans serif";
+    padding: 20px;
+
+}
+.para{
+    font-size: 25px;
+    border: solid rgb(255, 0, 212) 0px;
+    padding: 16px;
+    background-color: #15ff00;
+    border-radius: 36px;
+    width: 20vw;
+    margin-left: 450px;
+    color:white;
+    text-align: center;
+    font-family: "Roboto";
+    text-decoration: none;
+    
+
+}

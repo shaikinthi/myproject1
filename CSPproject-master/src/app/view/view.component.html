@@ -1,0 +1,81 @@
+<mat-toolbar color="primary" class="mat-elevation-z8"><span>HYGIENE</span>
+    <div class="spacer"></div>
+    <a routerLink="/home"mat-button>HOME</a>
+          
+    <a routerLink="/about"mat-button>ABOUT</a>
+  
+    <a routerLink="/need" mat-button>HYGIENE</a><br><br>
+    
+    <a routerLink="/details" mat-button>DETAILS</a>
+    <a routerLink="/contact" mat-button>CONTACT</a>
+    <a routerLink="/logout" mat-button>LOGOUT</a>
+    
+    
+    
+    
+    
+    </mat-toolbar>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">DETAILS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" routerLink="/insert" routerLinkActive="active">INSERT</a>
+            <a class="nav-item nav-link" routerLink="/delete" routerLinkActive="active">DELETE</a>
+            <a class="nav-item nav-link" routerLink="/read" routerLinkActive="active">READ</a>
+            <a class="nav-item nav-link " routerLink="/update" routerLinkActive="active">UPDATE</a>
+            <a class="nav-item nav-link " routerLink="/view" routerLinkActive="active">VIEW</a>
+          </div>
+        </div>
+      </nav>
+
+
+      <h2><button  color="btn btn-success" (click)="ReadAll('All')">GET ALL</button></h2>
+<body>
+    <table align="center">  
+     
+         <th>ID</th>  <th>NAME</th><th>HAND_WASHING</th><th>USING_SOAP</th><th>BRUSHING</th><th>CLEAN_SURROUNDINGS</th>
+
+        <tr *ngFor="let i of d">
+        <td>{{i[0]}}</td>  
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[5]}}</td>  
+         <td><button type="button" class="btn btn-primary"  (click)="Get(i)">Update</button></td>
+
+        <td><button type="button" id="d" class="btn btn-danger" (click)="Delete(i)">Delete</button></td>
+
+        <td><button type="button" id="r" class="btn btn-success" (click)="Read(i)">Read</button></td>
+        </tr>
+    </table> 
+</body>
+<div  class="bo" *ngIf="match" [class.hide]="hide"> 
+    <p>id: {{d1[0][0]}}</p>
+    <p>name: {{d1[0][1]}}</p>
+    <p>hand_washing: {{d1[0][2]}}</p>
+    <p>using_soap: {{d1[0][3]}}</p>
+    <p>brushing: {{d1[0][4]}}</p>
+    <p>clean_surroundings: {{d1[0][5]}}</p>
+    <button type="button" class="btn btn-success" (click)="Close()">Close</button>
+</div> 
+<div  class="bo" *ngIf="match1" [class.hide]="hide"> 
+    <label for="id">Id:</label> 
+    <br>
+    <input type="number" name="id" [(ngModel)]="User.id"> <br>  
+    <label for="name">Name:</label> <br>
+    <input type="text" name="name" [(ngModel)]="User.name"><br> 
+    <label for="hand_washing">Hand_washing:</label> <br>
+    <input type="number" name="hand_washing" [(ngModel)]="User.hand_washing"> <br>  
+    <label for="using_soap">Using_soap:</label> <br>
+    <input type="number" name="using_soap" [(ngModel)]="User.using_soap"> <br>  
+    <label for="brushing">Brushing:</label> <br>
+    <input type="number" name="brushing" [(ngModel)]="User.brushing"> <br>  
+    <label for="clean_surroundings">Clean_surroundings:</label> <br>
+    <input type="number" name="clean_surroundings" [(ngModel)]="User.clean_surroundings"> <br>    
+    <button type="button"  color="btn btn-success" (click)="Update()">Update</button>
+    <button type="button" class="btn btn-success" (click)="Close()">Close</button>
+</div>

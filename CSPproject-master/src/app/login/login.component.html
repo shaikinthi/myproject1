@@ -1,0 +1,63 @@
+<!--<div>
+  <form #r="ngform" (ngsubmit)="Insert()">
+  <p>USERNAME:<input type="text" name="user"/></p>
+  <br>
+  <br>
+  <p>PASSWORD:<input type="password" name="password"/></p>
+  <br><br>
+  <button>SIGN UP</button>
+  </form>
+  </div>-->
+  <!--<body>
+  <div class="form1 d-flex justify-content-center">
+    <form #insertForm="ngForm" (ngSubmit)="Insert(insertForm)">
+        <div class="message">
+    <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+    <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+    </div>
+    <div class="para">
+    <p><label class="label">USERNAME:</label></p>
+    &nbsp;
+    &nbsp;
+    <input class="form-control" style="width: 20vw;" type="text" name="username" required    [(ngModel)]="User.username">
+    <br/>
+    <span *ngIf="username.invalid && username.touched" style="color:red">Please Enter Username</span>
+    <br/>
+    
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <p><label>PASSWORD:</label></p>
+    <input class="form-control" style="width: 20vw;" type="password" required  name="password"  [(ngModel)]="User.password">
+    <br/>
+    <span *ngIf="password.invalid && password.touched" style="color:red">Please Enter password</span>
+    <br/>
+    
+    <div class="d-flex justify-content-center">
+    <input type="submit" value="Insert" class="button"  [disabled]="insertForm.invalid">&nbsp;&nbsp;
+    <button  class="bt" routerLink="/home">login</button>
+    </div>
+    </div>
+    </form>
+</div>
+  </body>-->
+  <div id="container">
+
+
+  <div id="cl">
+      <div class="input">
+  <h1 >LOGIN FORM</h1>
+  <form [formGroup]="loginForm"(ngSubmit)="loginUser()" >
+    <label>Emailid</label><br>
+      <input type="text" placeholder="enter email" formControlName="user">
+      <br>
+      <span style="color: red;" *ngIf="user && user.invalid && user.touched"> user filed is not valid</span>
+      <br>
+      <br>
+      <label>Password</label><br>
+      <input type="password" placeholder="enter password"formControlName="password">
+      <br>
+      <span style="color: red;" *ngIf="password && password.invalid && password.touched"> password filed is not valid</span>
+      <button  [disabled]="loginForm.invalid" routerLink="/home">Login</button>
+  </form>
+  </div></div></div>

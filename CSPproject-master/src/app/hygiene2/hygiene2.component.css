@@ -1,0 +1,12 @@
+div{
+    background-image:url("https://tse3.mm.bing.net/th?id=OIP.qD4aDqoQgw1CSlcsiaARtAHaE8&pid=Api&P=0&h=180");
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding:30px;
+    height:100vh;
+}
+li{
+    font-size:40px;
+    font-family:bold;
+    color:rgb(26, 2, 2);
+}

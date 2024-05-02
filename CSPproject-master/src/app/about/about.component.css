@@ -1,0 +1,29 @@
+.figure{
+    display:flex;
+    grid-template-columns:6fr 6fr;
+    padding:30px;
+  }
+  h1,h2{
+    text-align: center;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:5px;
+    font-family: bold;
+    font-weight: 40px;
+  }
+  img{
+    border-radius: 80px;
+  }
+  p{
+    text-align: center;
+    font-size: 20px;
+    font-family: bold;
+  }
+  div{
+    background-image: linear-gradient(hsl(103, 19%, 7%),hsl(308, 27%, 94%));
+    color:aliceblue;
+  }
+  h3{
+    font-family:bold;
+  }
+  
